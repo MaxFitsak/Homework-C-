@@ -1,4 +1,4 @@
-﻿namespace F1opl
+﻿namespace Fiopl
 {
     class Date
     {
@@ -82,5 +82,5 @@
         {
             Console.WriteLine("{0}:{1}:{2} Day -> {3}", day, month, year, GetDayOfWeek());
         }
-    }   
+    }
 }
