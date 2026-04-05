@@ -1,4 +1,7 @@
-﻿namespace Fiopl
+﻿using System.Diagnostics;
+using System.Numerics;
+
+namespace Fiopl
 {
     class Date
     {
@@ -28,15 +31,15 @@
 
         private bool IsLeap(int y) => (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
 
-        public int Difference(Date other)
+        public static int operator -(Date day, Date day2) 
         {
-            return Math.Abs(this.GetTotalDays() - other.GetTotalDays());
+           return Math.Abs(day.GetTotalDays() - day2.GetTotalDays());
         }
 
-        private int GetDaysInCurrentMonth()
+        private int GetDaysInMonth(int m, int y)
         {
-            if (month == 2 && IsLeap(year)) return 29;
-            return daysInMonth[month];
+            if (m == 2 && IsLeap(y)) return 29;
+            return daysInMonth[m];
         }
 
         public int GetTotalDays()
@@ -51,19 +54,22 @@
             return total;
         }
 
-         public void AddDays(int count)
+        public static Date operator +(Date start, int count)
         {
-            day += count;
-            while (day > GetDaysInCurrentMonth())
+            Date res = new Date(start.Day, start.Month, start.Year);
+            res.Day += count;
+
+            while (res.Day > res.GetDaysInMonth(res.Month, res.Year))
             {
-                day -= GetDaysInCurrentMonth();
-                month++;
-                if (month > 12)
+                res.Day -= res.GetDaysInMonth(res.Month, res.Year);
+                res.Month++;
+                if (res.Month > 12)
                 {
-                    month = 1;
-                    year++;
+                    res.Month = 1;
+                    res.Year++;
                 }
             }
+            return res;
         }
 
         public string GetDayOfWeek()
@@ -77,6 +83,31 @@
             string[] names = { "Saturday", "Sunday", "Monday", "Thuesday", "Wendsay", "Thurday", "Friday" };
             return names[h];
         }
+
+        public static bool operator >(Date d1, Date d2)
+        {
+            return d1.GetTotalDays() > d2.GetTotalDays();
+        }
+
+        public static bool operator <(Date d1, Date d2)
+        {
+            return d1.GetTotalDays() < d2.GetTotalDays();
+        }
+
+        public static bool operator ==(Date d1, Date d2)
+        {
+            if (ReferenceEquals(d1, d2)) return true;
+            if (d1 is null || d2 is null) return false;
+            return d1.GetTotalDays() == d2.GetTotalDays();
+        }
+
+        public static bool operator !=(Date d1, Date d2)
+        {
+            return !(d1 == d2);
+        }
+
+        public static Date operator ++(Date day) => day + 1;
+        public static Date operator --(Date day) => day + (-1);
 
         public void Print()
         {

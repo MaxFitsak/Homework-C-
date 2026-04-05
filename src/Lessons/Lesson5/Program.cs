@@ -63,87 +63,43 @@ class Employeer
             NumberPhone, Name, Email, Birthday, Level, Work);
         }
     }
-
-
-class ReadBooks
-{
-    public string[] Books{ get; set; }
-    int count;
-
-    public int Count{get {return count;} }
-
-    public ReadBooks()
+    class ReadBooks
     {
-        Books = new string[0];
-        count = 0;
-    }
+        private string[] books = new string[0];
 
-    public string this[int index]
-    {
-        get
+        public string this[int index]
         {
-            if (index >= 0 && index < Books.Length)
+            get 
             {
-                return Books[index];
+                if (index < 0 || index >= books.Length) throw new IndexOutOfRangeException();
+                return books[index];
             }
-            else
+            set 
             {
-                throw new Exception("\nНекоректний індекс " + index);
+                if (index < 0 || index >= books.Length) throw new IndexOutOfRangeException();
+                books[index] = value;
             }
         }
-        set
+
+        public static ReadBooks operator +(ReadBooks list, string bookName)
         {
-            if (index >= 0 && index < Books.Length)
+            Array.Resize(ref list.books, list.books.Length + 1);
+            list.books[list.books.Length - 1] = bookName;
+            return list;
+        }
+
+        public static ReadBooks operator -(ReadBooks list, string bookName)
+        {
+            list.books = list.books.Where(b => b != bookName).ToArray();
+            return list;
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("\nСписок книг:");
+            for (int i = 0; i < books.Length; i++)
             {
-                Books[index] = value;
-            }
-            else
-            {
-                throw new Exception("\nНекоректний індекс " + index);
+                Console.WriteLine($"{i}. {books[i]}");
             }
         }
-    }
-
-    public bool Content(string bookName)
-    {
-        for (int i = 0; i < count; i++)
-        {
-            if(Books[i] == bookName) return true;
-        }
-        return false;
-    }
-
-    public static ReadBooks operator +(ReadBooks list, string bookName)
-    {
-        Array.Resize(ref list.Books, list.count + 1);
-        list.Books[list.count] = bookName;
-        list.count++;
-        return list;
-    }
-
-    public static ReadBooks operator -(ReadBooks list, string bookName)
-    {
-        int index = Array.FindIndex(list.Books, b => b == bookName);
-        if(index != -1)
-        {
-            for (int i = index; i < list.count -1 ; i++)
-            {
-                list.Books[i] = list.Books[i + 1];
-            }
-
-            list.count--;
-            Array.Resize(ref list.Books, list.count);
-        }
-        return list;
-    }
-
-    public void Print()
-    {
-        Console.WriteLine("\n\nСписок книг");
-        if (count == 0 ) Console.WriteLine("Список пустий");
-        for (int i = 0; i < count; i++)
-        {
-            Console.WriteLine("{0}. {1}",i, Books[i]);
-        }
-    }
 }

@@ -36,8 +36,5 @@ class Program
         myLibrary -= "Відьмаг";
 
         myLibrary.Print();
-
-        Console.WriteLine("\nНажмите Enter, чтобы выйти...");
-        Console.ReadLine();
     }
 }
