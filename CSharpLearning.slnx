@@ -1,0 +1,30 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Homeworks/">
+    <Project Path="src/Homeworks/Homework10/Homework10.csproj" />
+    <Project Path="src/Homeworks/Homework2/Homework2.csproj" />
+    <Project Path="src/Homeworks/Homework3/Homework3.csproj" />
+    <Project Path="src/Homeworks/Homework4/Homework4.csproj" />
+    <Project Path="src/Homeworks/Homework5/Homework5.csproj" />
+    <Project Path="src/Homeworks/Homework6/Homework6.csproj" />
+    <Project Path="src/Homeworks/Homework7/Homework7.csproj" />
+    <Project Path="src/Homeworks/Homework8/Homework8.csproj" />
+    <Project Path="src/Homeworks/Homework9/Homework9.csproj" />
+  </Folder>
+  <Folder Name="/src/Homeworks/Homework1/">
+    <Project Path="src/Homeworks/Homework1/ConsoleApp1.csproj" />
+  </Folder>
+  <Folder Name="/src/Lessons/">
+    <Project Path="src/Lessons/Lesson 1/Lesson 1.csproj" />
+    <Project Path="src/Lessons/Lesson10/Lesson10.csproj" />
+    <Project Path="src/Lessons/Lesson13/Lesson13.csproj" />
+    <Project Path="src/Lessons/Lesson2/Lesson2.csproj" />
+    <Project Path="src/Lessons/Lesson3/Lesson3.csproj" />
+    <Project Path="src/Lessons/Lesson4/Lesson4.csproj" />
+    <Project Path="src/Lessons/Lesson5/Lesson5.csproj" />
+    <Project Path="src/Lessons/Lesson6/Lesson6.csproj" />
+    <Project Path="src/Lessons/Lesson7/Lesson7.csproj" />
+    <Project Path="src/Lessons/Lesson8/Lesson8.csproj" />
+    <Project Path="src/Lessons/Lesson9/Lesson9.csproj" />
+  </Folder>
+</Solution>
