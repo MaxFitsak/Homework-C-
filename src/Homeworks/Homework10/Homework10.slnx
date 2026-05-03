@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CollectionOfFigures/CollectionOfFigures.csproj" />
+  <Project Path="Shape/Shape.csproj" />
+</Solution>

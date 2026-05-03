@@ -2,7 +2,7 @@ namespace F1opl
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Date dateDefault = new Date();
             Console.Write("First date -> ");

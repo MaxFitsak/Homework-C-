@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Client/Client.csproj" />
+  <Project Path="Homework12.csproj" />
+  <Project Path="Person/Person.csproj" />
+  <Project Path="Student/Student.csproj" />
+</Solution>
