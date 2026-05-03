@@ -1,0 +1,16 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\bin\Debug\net10.0\CollectionOfFigures.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\bin\Debug\net10.0\CollectionOfFigures.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\bin\Debug\net10.0\CollectionOfFigures.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\bin\Debug\net10.0\Shape.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\bin\Debug\net10.0\Shape.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.csproj.AssemblyReference.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\Collecti.4C10F55A.Up2Date
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\refint\CollectionOfFigures.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\CollectionOfFigures.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework10\CollectionOfFigures\obj\Debug\net10.0\ref\CollectionOfFigures.dll

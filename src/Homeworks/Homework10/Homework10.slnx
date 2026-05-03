@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Client/Client.csproj" Id="4fdcda12-7390-4d70-98dd-ce1aae0e70f2" />
   <Project Path="CollectionOfFigures/CollectionOfFigures.csproj" />
   <Project Path="Shape/Shape.csproj" />
 </Solution>
