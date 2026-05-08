@@ -1,6 +1,8 @@
 <Solution>
+  <Project Path="../Homework17.1/Homework17.1.csproj" Id="c6e434dc-3900-4a05-848d-c5656e134df4" />
+  <Project Path="../Homework17.2/Homework17.2.csproj" Id="0a5b0ff0-5103-4104-b842-6dde0ab266a5" />
+  <Project Path="AcademyGroup/AcademyGroup.csproj" Id="c0b9c644-4013-4762-ab35-5f4959a62768" />
   <Project Path="Client/Client.csproj" />
-  <Project Path="Homework12.csproj" />
   <Project Path="Person/Person.csproj" />
   <Project Path="Student/Student.csproj" />
 </Solution>
