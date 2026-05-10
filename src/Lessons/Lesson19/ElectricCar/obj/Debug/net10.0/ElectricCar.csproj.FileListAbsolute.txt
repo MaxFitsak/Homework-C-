@@ -1,0 +1,16 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\bin\Debug\net10.0\ElectricCar.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\bin\Debug\net10.0\ElectricCar.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\bin\Debug\net10.0\ElectricCar.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\refint\ElectricCar.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ref\ElectricCar.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\bin\Debug\net10.0\Car.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\bin\Debug\net10.0\Car.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\ElectricCar.csproj.AssemblyReference.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\ElectricCar\obj\Debug\net10.0\Electric.B1070492.Up2Date

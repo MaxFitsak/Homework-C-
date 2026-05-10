@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Car/Car.csproj" />
+  <Project Path="ElectricCar/ElectricCar.csproj" />
+  <Project Path="Lesson19/Main.csproj" />
+</Solution>

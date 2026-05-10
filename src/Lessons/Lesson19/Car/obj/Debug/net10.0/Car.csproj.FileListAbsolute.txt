@@ -1,0 +1,12 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\bin\Debug\net10.0\Car.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\bin\Debug\net10.0\Car.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\bin\Debug\net10.0\Car.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\Car.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\Car.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\Car.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\Car.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\Car.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\Car.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\refint\Car.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\Car.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson19\Car\obj\Debug\net10.0\ref\Car.dll
