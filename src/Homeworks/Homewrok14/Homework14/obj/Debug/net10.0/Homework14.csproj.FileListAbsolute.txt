@@ -1,0 +1,15 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\bin\Debug\net10.0\Homework14.exe
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\bin\Debug\net10.0\Homework14.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\bin\Debug\net10.0\Homework14.runtimeconfig.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\bin\Debug\net10.0\Homework14.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\bin\Debug\net10.0\Homework14.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\refint\Homework14.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\Homework14.genruntimeconfig.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Client\Homework14\obj\Debug\net10.0\ref\Homework14.dll
