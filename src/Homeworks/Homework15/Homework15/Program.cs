@@ -4,9 +4,17 @@ namespace Tamagochi;
 
 class Tamogochi
 {
-    public delegate void TamagochiHeadler(string message);
+    public delegate void TamagochiEatHeadler(string message);
+    public delegate void TamagochiSleepHeadler(string message);
+    public delegate void TamagochiWalkHeadler(string message);
+    public delegate void TamagochiPlayHeadler(string message);
+    public delegate void TamagochiTreatHeadler(string message);
 
-    public event TamagochiHeadler OnAlarm;
+    public event TamagochiEatHeadler OnEat;
+    public event TamagochiSleepHeadler OnSleep;
+    public event TamagochiWalkHeadler OnWalk;
+    public event TamagochiPlayHeadler OnPlay;
+    public event TamagochiTreatHeadler OnTreat;
 
     public int Healthy { get; set; }
 
@@ -25,12 +33,12 @@ class Tamogochi
             {
                 Healthy += 33;
             }
-            OnAlarm?.Invoke("Тамогочі покормлено");
+            OnEat?.Invoke("Тамогочі покормлено");
         }
         else if(select == 'N' || select == 'n')
         {
             Healthy -= 33;
-            OnAlarm?.Invoke("Тамогочі голодний");
+            OnEat?.Invoke("Тамогочі голодний");
         }
     }
 
@@ -44,12 +52,12 @@ class Tamogochi
             {
                 Healthy += 33;
             }
-            OnAlarm?.Invoke("Тамогочі Вигуляно");
+            OnWalk?.Invoke("Тамогочі Вигуляно");
         }
         else if (select == 'N' || select == 'n')
         {
             Healthy -= 33;
-            OnAlarm?.Invoke("Тамогочі Хоче гуляти");
+            OnWalk?.Invoke("Тамогочі Хоче гуляти");
         }
     }
 
@@ -63,12 +71,12 @@ class Tamogochi
             {
                 Healthy += 33;
             }
-            OnAlarm?.Invoke("Тамогочі виспався");
+            OnSleep?.Invoke("Тамогочі виспався");
         }
         else if (select == 'N' || select == 'n')
         {
             Healthy -= 33;
-            OnAlarm?.Invoke("Тамогочі сонний");
+            OnSleep?.Invoke("Тамогочі сонний");
         }
     }
 
@@ -80,13 +88,13 @@ class Tamogochi
         if (select == 'Y' || select == 'y')
         {
                 Healthy = 100;
-            OnAlarm?.Invoke("Тамогочі виліковано");
+            OnTreat?.Invoke("Тамогочі виліковано");
             return false;
         }
         else if (select == 'N' || select == 'n')
         {
             Healthy = 0;
-            OnAlarm?.Invoke("Тамогочі Вмер");
+            OnTreat?.Invoke("Тамогочі Вмер");
             Dead();
             return true;
         }
@@ -103,12 +111,12 @@ class Tamogochi
             {
                 Healthy += 33;
             }
-            OnAlarm?.Invoke("Тамогочі награвся");
+            OnPlay?.Invoke("Тамогочі награвся");
         }
         else if (select == 'N' || select == 'n')
         {
             Healthy -= 33;
-            OnAlarm?.Invoke("Тамогочі хоче гратися");
+            OnPlay?.Invoke("Тамогочі хоче гратися");
         }
     }
 
@@ -205,6 +213,13 @@ class Program
         Console.InputEncoding = Encoding.UTF8;
 
         Tamogochi tamagochi = new Tamogochi();
+
+        tamagochi.OnSleep += (msg) => Console.WriteLine(msg);
+        tamagochi.OnPlay += (msg) => Console.WriteLine(msg);
+        tamagochi.OnEat += (msg) => Console.WriteLine(msg);
+        tamagochi.OnTreat += (msg) => Console.WriteLine(msg);
+        tamagochi.OnWalk += (msg) => Console.WriteLine(msg);
+
         Random select = new Random();
         int memory = 0;
 
