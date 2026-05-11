@@ -1,0 +1,15 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\bin\Debug\net10.0\Homework16.exe
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\bin\Debug\net10.0\Homework16.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\bin\Debug\net10.0\Homework16.runtimeconfig.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\bin\Debug\net10.0\Homework16.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\bin\Debug\net10.0\Homework16.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\refint\Homework16.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\Homework16.genruntimeconfig.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework16\Homework16\obj\Debug\net10.0\ref\Homework16.dll
