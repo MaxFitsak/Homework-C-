@@ -1,0 +1,15 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\bin\Debug\net10.0\Homework15.exe
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\bin\Debug\net10.0\Homework15.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\bin\Debug\net10.0\Homework15.runtimeconfig.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\bin\Debug\net10.0\Homework15.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\bin\Debug\net10.0\Homework15.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\refint\Homework15.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\Homework15.genruntimeconfig.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework15\Homework15\obj\Debug\net10.0\ref\Homework15.dll
