@@ -1,0 +1,15 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\bin\Debug\net10.0\Homework18.1.exe
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\bin\Debug\net10.0\Homework18.1.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\bin\Debug\net10.0\Homework18.1.runtimeconfig.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\bin\Debug\net10.0\Homework18.1.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\bin\Debug\net10.0\Homework18.1.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\refint\Homework18.1.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\Homework18.1.genruntimeconfig.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework18.1\Homework18.1\obj\Debug\net10.0\ref\Homework18.1.dll
