@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AcademuGroup/AcademuGroup.csproj" Id="e788ead0-9c49-4ba6-a651-e023e78035e5" />
+  <Project Path="Homework19/Homework19.csproj" />
+  <Project Path="Person/Person.csproj" Id="77bb2c27-f691-4c88-aeed-4d0f58c7adf7" />
+  <Project Path="Student/Student.csproj" Id="28db77c7-bd4a-401d-ba52-223b91d1d6b1" />
+</Solution>

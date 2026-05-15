@@ -1,0 +1,15 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\bin\Debug\net10.0\Homework19.exe
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\bin\Debug\net10.0\Homework19.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\bin\Debug\net10.0\Homework19.runtimeconfig.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\bin\Debug\net10.0\Homework19.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\bin\Debug\net10.0\Homework19.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\refint\Homework19.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\Homework19.genruntimeconfig.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework19\Homework19\obj\Debug\net10.0\ref\Homework19.dll
