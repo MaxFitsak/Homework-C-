@@ -3,11 +3,8 @@ namespace Task
     class Program
     {
         static void Client(ICalc calcObject)
-        {
-            Console.WriteLine("--- Робота через інтерфейс ---");
-            
+        {   
             Console.WriteLine(calcObject.CountDistinct());
-            //Console.WriteLine(calcObject.EqualToValue());
         }
 
         static void Main()
@@ -19,4 +16,4 @@ namespace Task
             Client(myCalc);
         }
     }
-}
+}   
