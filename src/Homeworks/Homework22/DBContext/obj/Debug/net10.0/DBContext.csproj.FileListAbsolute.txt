@@ -1,0 +1,16 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\bin\Debug\net10.0\DBContext.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\bin\Debug\net10.0\DBContext.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\bin\Debug\net10.0\DBContext.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\bin\Debug\net10.0\Country.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\bin\Debug\net10.0\Country.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.csproj.AssemblyReference.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.csproj.Up2Date
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\refint\DBContext.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\DBContext.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework22\DBContext\obj\Debug\net10.0\ref\DBContext.dll
