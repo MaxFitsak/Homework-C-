@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Country/Country.csproj" />
+  <Project Path="DbContext/DbContext.csproj" />
+  <Project Path="Homework21/Homework21.csproj" />
+</Solution>
