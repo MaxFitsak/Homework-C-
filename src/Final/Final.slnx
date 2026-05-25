@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="CarrierOfInformation/CarrierOfInformation.csproj" Id="ca550057-c514-4b70-8290-1112e2bfc21e" />
+  <Project Path="Devices/Devices.csproj" Id="d5d04b66-dc58-48da-a616-d5740a259370" />
+  <Project Path="Final/Client.csproj" />
+  <Project Path="Interfaces/Interfaces.csproj" Id="5e60423a-091f-4def-922a-53b1e5d2b517" />
+  <Project Path="Logging/Logging.csproj" Id="887fb58c-ff28-4a73-a1dc-ee0d6c8b5020" />
+  <Project Path="PriceList/PriceList.csproj" Id="a6c9707b-552f-4bf3-8fbe-584b6a35adc6" />
+  <Project Path="Serialization/Serialization.csproj" Id="e2e0b8f8-ddb0-40fa-b1b0-5ceac7d60061" />
+</Solution>
