@@ -2,8 +2,8 @@ using System;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using Lesson25.Models;   // Підключаємо згенеровані моделі
-using Lesson25.Dialogs;  // Підключаємо діалогове вікно
+using Lesson25.Models;  
+using Lesson25.Dialogs; 
 
 namespace Lesson25
 {
