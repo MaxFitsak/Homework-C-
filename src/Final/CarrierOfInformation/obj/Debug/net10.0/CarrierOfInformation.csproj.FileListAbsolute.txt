@@ -1,0 +1,16 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\bin\Debug\net10.0\CarrierOfInformation.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\bin\Debug\net10.0\CarrierOfInformation.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\bin\Debug\net10.0\CarrierOfInformation.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\bin\Debug\net10.0\Interfaces.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\bin\Debug\net10.0\Interfaces.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.csproj.AssemblyReference.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierO.E868EDC6.Up2Date
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\refint\CarrierOfInformation.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\CarrierOfInformation.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Final\CarrierOfInformation\obj\Debug\net10.0\ref\CarrierOfInformation.dll

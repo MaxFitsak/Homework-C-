@@ -1,0 +1,16 @@
+[
+  {
+    "NameManufacturer": "\u0410\u0444\u0456",
+    "Model": "123",
+    "Naming": "12",
+    "Capacity": 1234,
+    "Count": 2
+  },
+  {
+    "NameManufacturer": "\u0456\u0444\u0432",
+    "Model": "123",
+    "Naming": "123",
+    "Capacity": 123,
+    "Count": 123
+  }
+]

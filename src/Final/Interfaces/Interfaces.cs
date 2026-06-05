@@ -1,15 +1,13 @@
-﻿namespace Interfaces
+﻿namespace Interfaces;
+
+public interface ILog
 {
-    public interface Ilog
-    {
-        void Print();
-    }
+    void Print(string text);
+}
 
-    public interface ISerialize
-    {
-        void Save();
+public interface ISerialize
+{
+    void Save(object data, string filePath);
 
-        void Load();
-    }
-
+    object Load(string filePath);
 }

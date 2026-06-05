@@ -1,6 +1,6 @@
 ﻿namespace CarrierOfInformation;
 
-class MediaWriter
+public abstract class MediaWriter
 {
     public string NameManufacturer { get; set; }
     public string Model { get; set; }
@@ -8,18 +8,22 @@ class MediaWriter
     public int Capacity { get; set; }
     public int Count { get; set; }
 
-    public virtual void Report()
+    protected MediaWriter()
     {
 
     }
 
-    public virtual void Load()
+    protected MediaWriter(string nameManufacturer, string model, string naming, int capacity, int count)
     {
-
+        NameManufacturer = nameManufacturer;
+        Model = model;
+        Naming = naming;
+        Capacity = capacity;
+        Count = count;
     }
 
-    public virtual void Save()
+    public virtual string Report()
     {
-
+        return $"Виробник: {NameManufacturer}, Модель: {Model}, Найменування: {Naming}, Місткість: {Capacity}, Кількість: {Count}";
     }
 }

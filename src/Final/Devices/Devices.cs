@@ -2,62 +2,56 @@
 
 namespace Devices;
 
-    public class FlashMemory : MediaWriter
+public class FlashMemory : MediaWriter
+{
+    public string UsbSpeed { get; set; } = string.Empty;
+
+    public FlashMemory() : base() { }
+
+    public FlashMemory(string nameManufacturer, string model, string naming, int capacity, int count, string usbSpeed)
+        : base(nameManufacturer, model, naming, capacity, count)
     {
-        public string Speed { get; set; }
-
-        public override void Report()
-        {
-
-        }
-
-        public override void Save()
-        {
-
-        }
-
-        public override void Load()
-        {
-
-        }
+        UsbSpeed = usbSpeed;
     }
 
-    public class DvdDisk : MediaWriter
+    public override string Report()
     {
-        public string Speed { get; set; }
+        return $"[Flash-пам'ять] {base.Report()}, Швидкість USB: {UsbSpeed}";
+    }
+}
 
-        public override void Report()
-        {
+public class DvdDisk : MediaWriter
+{
+    public string WriteSpeed { get; set; } = string.Empty;
 
-        }
+    public DvdDisk() : base() { }
 
-        public override void Save()
-        {
-
-        }
-
-        public override void Load()
-        {
-
-        }
+    public DvdDisk(string nameManufacturer, string model, string naming, int capacity, int count, string writeSpeed)
+        : base(nameManufacturer, model, naming, capacity, count)
+    {
+        WriteSpeed = writeSpeed;
     }
 
-    public class RemovableHdd : MediaWriter
+    public override string Report()
     {
-        public string Speed { get; set; }
-
-        public override void Report()
-        {
-
-        }
-
-        public override void Save()
-        {
-
-        }
-
-        public override void Load()
-        {
-
-        }
+        return $"[DVD-диск] {base.Report()}, Швидкість запису: {WriteSpeed}";
     }
+}
+
+public class Hdd : MediaWriter
+{
+    public int SpindleSpeed { get; set; }
+
+    public Hdd() : base() { }
+
+    public Hdd(string nameManufacturer, string model, string naming, int capacity, int count, int spindleSpeed)
+        : base(nameManufacturer, model, naming, capacity, count)
+    {
+        SpindleSpeed = spindleSpeed;
+    }
+
+    public override string Report()
+    {
+        return $"[HDD-диск] {base.Report()}, Швидкість шпинделя: {SpindleSpeed} RPM";
+    }
+}
