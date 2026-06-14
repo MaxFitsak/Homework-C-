@@ -34,15 +34,15 @@ namespace Homework23
                     context.Database.EnsureCreated();
 
                     var data = context.Products
-                        .Include(p => p.ProductType)
-                        .Include(p => p.Supllier)
                         .Select(p => new
                         {
                             ID = p.Id,
                             Name = p.Name,
                             Type = p.ProductType.Name,
                             Sipplaer = p.Supllier.Name,
-                            Price = p.CostPrice
+                            Price = p.CostPrice,
+                            Supllier = p.Supllier,
+                            ProductType = p.ProductType
                         })
                         .ToList();
 
@@ -135,14 +135,14 @@ namespace Homework23
 
                     case "Товар заданої категорії":
                         dataGridView.DataSource = context.Products
-                            .Where(p => p.ProductType.Name == txtName.Text)
+                            .Where(p => p.ProductType.Name == textProductType.Text)
                             .Select(p => new { p.Id, p.Name, Категорія = p.ProductType.Name, p.Quantity })
                             .ToList();
                         break;
 
                     case "Товар заданого постачальника":
                         dataGridView.DataSource = context.Products
-                            .Where(p => p.Supllier.Name == txtName.Text)
+                            .Where(p => p.Supllier.Name == textSupllier.Text)
                             .Select(p => new {
                                 p.Id,
                                 p.Name,
@@ -161,20 +161,59 @@ namespace Homework23
 
             int selectedId = (int)dataGridView.CurrentRow.Cells["Id"].Value;
 
-            using (warehouse context = new warehouse())
+            try
             {
-                var product = context.Products.Find(selectedId);
-                if (product != null)
+                using (warehouse context = new warehouse())
                 {
-                    product.Name = txtName.Text;
-                    product.Quantity = int.Parse(txtQuantity.Text);
-                    product.CostPrice = double.Parse(txtPrice.Text);
-                    product.DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
+                    var product = context.Products.Find(selectedId);
+                    if (product != null)
+                    {
+                        product.Name = txtName.Text;
 
-                    context.SaveChanges();
-                    MessageBox.Show("Дані оновлено!");
-                    listBox_SelectedIndexChanged(null, null);
+                        if (!int.TryParse(txtQuantity.Text, out int quantity))
+                        {
+                            MessageBox.Show("Помилка у полі Кількість!");
+                            return;
+                        }
+                        product.Quantity = quantity;
+
+                        string priceText = txtPrice.Text.Trim().Replace(',', '.');
+                        if (!double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price))
+                        {
+                            MessageBox.Show("Помилка у полі Ціна!");
+                            return;
+                        }
+                        product.CostPrice = price;
+
+                        product.DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
+
+                        // Тип товару
+                        var productTypeEntity = context.ProductTypes.FirstOrDefault(t => t.Name == textProductType.Text);
+                        if (productTypeEntity == null)
+                        {
+                            productTypeEntity = new ProductType { Name = textProductType.Text };
+                            context.ProductTypes.Add(productTypeEntity);
+                        }
+                        product.ProductType = productTypeEntity;
+
+                        // Постачальник
+                        var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name == textSupllier.Text);
+                        if (supplierEntity == null)
+                        {
+                            supplierEntity = new Supllier { Name = textSupllier.Text };
+                            context.Suplliers.Add(supplierEntity);
+                        }
+                        product.Supllier = supplierEntity;
+
+                        context.SaveChanges();
+                        MessageBox.Show("Дані оновлено!");
+                        listBox_SelectedIndexChanged(null, null);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -187,17 +226,24 @@ namespace Homework23
             var confirmResult = MessageBox.Show("Ви впевнені, що хочете видалити цей товар?", "Підтвердження", MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
-                using (warehouse context = new warehouse())
+                try
                 {
-                    var product = context.Products.Find(selectedId);
-                    if (product != null)
+                    using (warehouse context = new warehouse())
                     {
-                        context.Products.Remove(product);
-                        context.SaveChanges();
+                        var product = context.Products.Find(selectedId);
+                        if (product != null)
+                        {
+                            context.Products.Remove(product);
+                            context.SaveChanges();
 
-                        MessageBox.Show("Товар видалено.");
-                        listBox_SelectedIndexChanged(null, null);
+                            MessageBox.Show("Товар видалено.");
+                            listBox_SelectedIndexChanged(null, null);
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -207,6 +253,8 @@ namespace Homework23
             string name = txtName.Text.Trim();
             string quantityText = txtQuantity.Text.Trim();
             string priceText = txtPrice.Text.Trim().Replace(',', '.');
+            string productType = textProductType.Text.Trim();
+            string supllier = textSupllier.Text.Trim();
 
             if (!int.TryParse(quantityText, out int quantity))
             {
@@ -226,12 +274,19 @@ namespace Homework23
                 {
                     context.Database.EnsureCreated();
 
-                    if (!context.ProductTypes.Any()) context.ProductTypes.Add(new ProductType { Name = "Загальне" });
-                    if (!context.Suplliers.Any()) context.Suplliers.Add(new Supllier { Name = "Основний постачальник" });
-                    context.SaveChanges();
+                    var productTypeEntity = context.ProductTypes.FirstOrDefault(t => t.Name == productType);
+                    if (productTypeEntity == null)
+                    {
+                        productTypeEntity = new ProductType { Name = productType };
+                        context.ProductTypes.Add(productTypeEntity);
+                    }
 
-                    var defaultType = context.ProductTypes.First();
-                    var defaultSupplier = context.Suplliers.First();
+                    var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name == supllier);
+                    if (supplierEntity == null)
+                    {
+                        supplierEntity = new Supllier { Name = supllier };
+                        context.Suplliers.Add(supplierEntity);
+                    }
 
                     Product newProduct = new Product
                     {
@@ -239,8 +294,8 @@ namespace Homework23
                         Quantity = quantity,
                         CostPrice = price,
                         DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd"),
-                        ProductType = defaultType,
-                        Supllier = defaultSupplier
+                        ProductType = productTypeEntity,
+                        Supllier = supplierEntity
                     };
 
                     context.Products.Add(newProduct);
@@ -254,7 +309,6 @@ namespace Homework23
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                                
             }
         }
     }

@@ -37,6 +37,8 @@
             txtQuantity = new TextBox();
             txtPrice = new TextBox();
             dataGridView = new DataGridView();
+            textSupllier = new TextBox();
+            textProductType = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -120,11 +122,29 @@
             dataGridView.TabIndex = 9;
             dataGridView.CellContentClick += dataGridView_CellContentClick;
             // 
+            // textSupllier
+            // 
+            textSupllier.Location = new Point(12, 37);
+            textSupllier.Name = "textSupllier";
+            textSupllier.Size = new Size(100, 23);
+            textSupllier.TabIndex = 10;
+            textSupllier.Text = "Постачальник";
+            // 
+            // textProductType
+            // 
+            textProductType.Location = new Point(118, 37);
+            textProductType.Name = "textProductType";
+            textProductType.Size = new Size(100, 23);
+            textProductType.TabIndex = 11;
+            textProductType.Text = "Тип товара";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textProductType);
+            Controls.Add(textSupllier);
             Controls.Add(dataGridView);
             Controls.Add(txtPrice);
             Controls.Add(txtQuantity);
@@ -134,6 +154,7 @@
             Controls.Add(btnDelete);
             Controls.Add(dateTimePicker);
             Controls.Add(listBox);
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
@@ -151,5 +172,7 @@
         private TextBox txtQuantity;
         private TextBox txtPrice;
         private DataGridView dataGridView;
+        private TextBox textSupllier;
+        private TextBox textProductType;
     }
 }
