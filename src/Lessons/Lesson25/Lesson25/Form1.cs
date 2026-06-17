@@ -37,8 +37,10 @@ namespace Lesson25
             comboBoxAuthors.DisplayMember = "Name";
             comboBoxAuthors.ValueMember = "Id";
 
-            if (currentSelection != null && authors.Any(a => a.Id == (long)currentSelection))
+            if (currentSelection != null && authors.Any(a => a.Id == Convert.ToInt64(currentSelection)))
+            {
                 comboBoxAuthors.SelectedValue = currentSelection;
+            }
         }
 
         private void RefreshBooks()
@@ -62,9 +64,16 @@ namespace Lesson25
             string name = InputDialog.Show("Додавання автора", "Введіть ім'я автора:");
             if (!string.IsNullOrWhiteSpace(name))
             {
-                _db.Authors.Add(new Author { Name = name.Trim() });
-                _db.SaveChanges();
-                LoadAuthors();
+                try
+                {
+                    _db.Authors.Add(new Author { Name = name.Trim() });
+                    _db.SaveChanges();
+                    LoadAuthors();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Помилка при додаванні автора: {ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -75,10 +84,17 @@ namespace Lesson25
                 string newName = InputDialog.Show("Редагування автора", "Введіть ім'я автора:", selectedAuthor.Name);
                 if (!string.IsNullOrWhiteSpace(newName))
                 {
-                    selectedAuthor.Name = newName.Trim();
-                    _db.SaveChanges();
-                    LoadAuthors();
-                    RefreshBooks();
+                    try
+                    {
+                        selectedAuthor.Name = newName.Trim();
+                        _db.SaveChanges();
+                        LoadAuthors();
+                        RefreshBooks();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Помилка при редагуванні автора: {ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -90,10 +106,24 @@ namespace Lesson25
                 var result = MessageBox.Show("Ви дійсно бажаєте видалити автора?", "Автори та книги", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    _db.Authors.Remove(selectedAuthor);
-                    _db.SaveChanges();
-                    LoadAuthors();
-                    RefreshBooks();
+                    try
+                    {
+                        _db.Authors.Remove(selectedAuthor);
+                        _db.SaveChanges();
+                        LoadAuthors();
+                        RefreshBooks();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show($"Не вдалося видалити автора: {ex.Message}",
+                                        "Помилка видалення", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        _db.Dispose();
+                        _db = new LibraryContext();
+                        LoadAuthors();
+                        RefreshBooks();
+                    }
                 }
             }
         }

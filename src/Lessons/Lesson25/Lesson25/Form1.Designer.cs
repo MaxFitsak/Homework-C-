@@ -31,15 +31,15 @@
         {
             menuStrip1 = new MenuStrip();
             опціїToolStripMenuItem = new ToolStripMenuItem();
-            checkBoxFilter = new CheckBox();
-            comboBoxAuthors = new ComboBox();
-            listBoxBooks = new ListBox();
             додатиАвтоToolStripMenuItem = new ToolStripMenuItem();
             додатиАвтораToolStripMenuItem = new ToolStripMenuItem();
             редагуватиАвтораToolStripMenuItem = new ToolStripMenuItem();
             додатиКнигуToolStripMenuItem = new ToolStripMenuItem();
             редагуватиКнигуToolStripMenuItem = new ToolStripMenuItem();
             видалитиКнигуToolStripMenuItem = new ToolStripMenuItem();
+            checkBoxFilter = new CheckBox();
+            comboBoxAuthors = new ComboBox();
+            listBoxBooks = new ListBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,6 +59,48 @@
             опціїToolStripMenuItem.Size = new Size(48, 20);
             опціїToolStripMenuItem.Text = "Опції";
             // 
+            // додатиАвтоToolStripMenuItem
+            // 
+            додатиАвтоToolStripMenuItem.Name = "додатиАвтоToolStripMenuItem";
+            додатиАвтоToolStripMenuItem.Size = new Size(174, 22);
+            додатиАвтоToolStripMenuItem.Text = "Додати автора";
+            додатиАвтоToolStripMenuItem.Click += menuAddAuthor_Click;
+            // 
+            // додатиАвтораToolStripMenuItem
+            // 
+            додатиАвтораToolStripMenuItem.Name = "додатиАвтораToolStripMenuItem";
+            додатиАвтораToolStripMenuItem.Size = new Size(174, 22);
+            додатиАвтораToolStripMenuItem.Text = "Видалити  автора";
+            додатиАвтораToolStripMenuItem.Click += menuDeleteAuthor_Click;
+            // 
+            // редагуватиАвтораToolStripMenuItem
+            // 
+            редагуватиАвтораToolStripMenuItem.Name = "редагуватиАвтораToolStripMenuItem";
+            редагуватиАвтораToolStripMenuItem.Size = new Size(174, 22);
+            редагуватиАвтораToolStripMenuItem.Text = "Редагувати автора";
+            редагуватиАвтораToolStripMenuItem.Click += menuEditAuthor_Click;
+            // 
+            // додатиКнигуToolStripMenuItem
+            // 
+            додатиКнигуToolStripMenuItem.Name = "додатиКнигуToolStripMenuItem";
+            додатиКнигуToolStripMenuItem.Size = new Size(174, 22);
+            додатиКнигуToolStripMenuItem.Text = "Додати книгу";
+            додатиКнигуToolStripMenuItem.Click += menuAddBook_Click;
+            // 
+            // редагуватиКнигуToolStripMenuItem
+            // 
+            редагуватиКнигуToolStripMenuItem.Name = "редагуватиКнигуToolStripMenuItem";
+            редагуватиКнигуToolStripMenuItem.Size = new Size(174, 22);
+            редагуватиКнигуToolStripMenuItem.Text = "Редагувати книгу";
+            редагуватиКнигуToolStripMenuItem.Click += menuEditBook_Click;
+            // 
+            // видалитиКнигуToolStripMenuItem
+            // 
+            видалитиКнигуToolStripMenuItem.Name = "видалитиКнигуToolStripMenuItem";
+            видалитиКнигуToolStripMenuItem.Size = new Size(174, 22);
+            видалитиКнигуToolStripMenuItem.Text = "Видалити книгу";
+            видалитиКнигуToolStripMenuItem.Click += menuDeleteBook_Click;
+            // 
             // checkBoxFilter
             // 
             checkBoxFilter.AutoSize = true;
@@ -71,6 +113,7 @@
             // 
             // comboBoxAuthors
             // 
+            comboBoxAuthors.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxAuthors.FormattingEnabled = true;
             comboBoxAuthors.Location = new Point(12, 27);
             comboBoxAuthors.Name = "comboBoxAuthors";
@@ -85,48 +128,6 @@
             listBoxBooks.Size = new Size(776, 349);
             listBoxBooks.TabIndex = 3;
             // 
-            // додатиАвтоToolStripMenuItem
-            // 
-            додатиАвтоToolStripMenuItem.Name = "додатиАвтоToolStripMenuItem";
-            додатиАвтоToolStripMenuItem.Size = new Size(180, 22);
-            додатиАвтоToolStripMenuItem.Text = "Додати автора";
-            додатиАвтоToolStripMenuItem.Click += menuAddAuthor_Click;
-            // 
-            // додатиАвтораToolStripMenuItem
-            // 
-            додатиАвтораToolStripMenuItem.Name = "додатиАвтораToolStripMenuItem";
-            додатиАвтораToolStripMenuItem.Size = new Size(180, 22);
-            додатиАвтораToolStripMenuItem.Text = "Видалити  автора";
-            додатиАвтораToolStripMenuItem.Click += menuDeleteAuthor_Click;
-            // 
-            // редагуватиАвтораToolStripMenuItem
-            // 
-            редагуватиАвтораToolStripMenuItem.Name = "редагуватиАвтораToolStripMenuItem";
-            редагуватиАвтораToolStripMenuItem.Size = new Size(180, 22);
-            редагуватиАвтораToolStripMenuItem.Text = "Редагувати автора";
-            редагуватиАвтораToolStripMenuItem.Click += menuEditAuthor_Click;
-            // 
-            // додатиКнигуToolStripMenuItem
-            // 
-            додатиКнигуToolStripMenuItem.Name = "додатиКнигуToolStripMenuItem";
-            додатиКнигуToolStripMenuItem.Size = new Size(180, 22);
-            додатиКнигуToolStripMenuItem.Text = "Додати книгу";
-            додатиКнигуToolStripMenuItem.Click += menuAddBook_Click;
-            // 
-            // редагуватиКнигуToolStripMenuItem
-            // 
-            редагуватиКнигуToolStripMenuItem.Name = "редагуватиКнигуToolStripMenuItem";
-            редагуватиКнигуToolStripMenuItem.Size = new Size(180, 22);
-            редагуватиКнигуToolStripMenuItem.Text = "Редагувати книгу";
-            редагуватиКнигуToolStripMenuItem.Click += menuEditBook_Click;
-            // 
-            // видалитиКнигуToolStripMenuItem
-            // 
-            видалитиКнигуToolStripMenuItem.Name = "видалитиКнигуToolStripMenuItem";
-            видалитиКнигуToolStripMenuItem.Size = new Size(180, 22);
-            видалитиКнигуToolStripMenuItem.Text = "Видалити книгу";
-            видалитиКнигуToolStripMenuItem.Click += menuDeleteBook_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -137,6 +138,7 @@
             Controls.Add(checkBoxFilter);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Автори та книги";
             menuStrip1.ResumeLayout(false);
