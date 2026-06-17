@@ -8,21 +8,39 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Globalization;
 
-
 namespace Homework23
 {
     public partial class Form1 : Form
     {
-        private warehouse _context;
-
         public Form1()
         {
             InitializeComponent();
 
-
             LoadFullProductsInfo();
+            LoadComboboxData();
+        }
 
+        private void LoadComboboxData()
+        {
+            try
+            {
+                using (warehouse context = new warehouse())
+                {
+                    context.Database.EnsureCreated();
 
+                    var types = context.ProductTypes.Select(t => t.Name).Distinct().ToList();
+                    cmbProductType.Items.Clear();
+                    cmbProductType.Items.AddRange(types.ToArray());
+
+                    var suppliers = context.Suplliers.Select(s => s.Name).Distinct().ToList();
+                    cmbSupplier.Items.Clear();
+                    cmbSupplier.Items.AddRange(suppliers.ToArray());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка завантаження списків: {ex.Message}");
+            }
         }
 
         private void LoadFullProductsInfo()
@@ -39,10 +57,10 @@ namespace Homework23
                             ID = p.Id,
                             Name = p.Name,
                             Type = p.ProductType.Name,
-                            Sipplaer = p.Supllier.Name,
+                            Supplier = p.Supllier.Name,
                             Price = p.CostPrice,
-                            Supllier = p.Supllier,
-                            ProductType = p.ProductType
+                            Quantity = p.Quantity,
+                            Date = p.DeliveryDate
                         })
                         .ToList();
 
@@ -55,111 +73,189 @@ namespace Homework23
             }
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void menuAllProducts_Click(object sender, EventArgs e)
         {
-
+            LoadFullProductsInfo();
         }
 
-        private void listBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void menuAllTypes_Click(object sender, EventArgs e)
         {
-            if (listBox.SelectedIndex == -1) return;
+            using (warehouse context = new warehouse())
+            {
+                LoadFullProductsInfo();
+            }
+        }
 
-            string selectedQuery = listBox.SelectedItem.ToString();
+        private void menuAllSuppliers_Click(object sender, EventArgs e)
+        {
+            using (warehouse context = new warehouse())
+            {
+                dataGridView.DataSource = context.Suplliers.Select(s => new { s.Id, Назва = s.Name }).ToList();
+            }
+        }
+
+        private void menuMaxQty_Click(object sender, EventArgs e)
+        {
+            using (warehouse context = new warehouse())
+            {
+                var maxQty = context.Products.Max(p => (int?)p.Quantity) ?? 0;
+                dataGridView.DataSource = context.Products
+                    .Where(p => p.Quantity == maxQty)
+                    .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
+                    .ToList();
+            }
+        }
+
+        private void menuMinQty_Click(object sender, EventArgs e)
+        {
+            using (warehouse context = new warehouse())
+            {
+                var minQty = context.Products.Min(p => (int?)p.Quantity) ?? 0;
+                dataGridView.DataSource = context.Products
+                    .Where(p => p.Quantity == minQty)
+                    .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
+                    .ToList();
+            }
+        }
+
+        private void menuMinPrice_Click(object sender, EventArgs e)
+        {
+            using (warehouse context = new warehouse())
+            {
+                var minPrice = context.Products.Min(p => (double?)p.CostPrice) ?? 0;
+                dataGridView.DataSource = context.Products
+                    .Where(p => p.CostPrice == minPrice)
+                    .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
+                    .ToList();
+            }
+        }
+
+        private void menuMaxPrice_Click(object sender, EventArgs e)
+        {
+            using (warehouse context = new warehouse())
+            {
+                var maxPrice = context.Products.Max(p => (double?)p.CostPrice) ?? 0;
+                dataGridView.DataSource = context.Products
+                    .Where(p => p.CostPrice == maxPrice)
+                    .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
+                    .ToList();
+            }
+        }
+
+        private void menuOldestProduct_Click(object sender, EventArgs e)
+        {
+            using (warehouse context = new warehouse())
+            {
+                var oldestDate = context.Products.Min(p => p.DeliveryDate);
+                dataGridView.DataSource = context.Products
+                    .Where(p => p.DeliveryDate == oldestDate)
+                    .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice, Дата = p.DeliveryDate })
+                    .ToList();
+            }
+        }
+
+        private void menuAvgByType_Click(object sender, EventArgs e)
+        {
+            using (warehouse context = new warehouse())
+            {
+                dataGridView.DataSource = context.Products
+                    .GroupBy(p => p.ProductType.Name)
+                    .Select(g => new { ТипТовару = g.Key, СередняКількість = g.Average(p => p.Quantity) })
+                    .ToList();
+            }
+        }
+
+        private void menuSelectedType_Click(object sender, EventArgs e)
+        {
+            string selectedType = cmbProductType.Text.Trim();
+            if (string.IsNullOrEmpty(selectedType))
+            {
+                MessageBox.Show("Спочатку виберіть або введіть тип товару у випадаючому списку!");
+                return;
+            }
 
             using (warehouse context = new warehouse())
             {
-                context.Database.EnsureCreated();
+                dataGridView.DataSource = context.Products
+                    .Where(p => p.ProductType.Name == selectedType)
+                    .Select(p => new { p.Id, p.Name, Категорія = p.ProductType.Name, p.Quantity })
+                    .ToList();
+            }
+        }
 
-                switch (selectedQuery)
+        private void menuSelectedSupplier_Click(object sender, EventArgs e)
+        {
+            string selectedSupplier = cmbSupplier.Text.Trim();
+            if (string.IsNullOrEmpty(selectedSupplier))
+            {
+                MessageBox.Show("Спочатку виберіть або введіть постачальника у випадаючому списку!");
+                return;
+            }
+
+            using (warehouse context = new warehouse())
+            {
+                dataGridView.DataSource = context.Products
+                    .Where(p => p.Supllier.Name == selectedSupplier)
+                    .Select(p => new { p.Id, p.Name, Постачальник = p.Supllier.Name, p.Quantity })
+                    .ToList();
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string name = txtName.Text.Trim();
+            string quantityText = txtQuantity.Text.Trim();
+            string priceText = txtPrice.Text.Trim().Replace(',', '.');
+            string productType = cmbProductType.Text.Trim();
+            string supplierName = cmbSupplier.Text.Trim();
+
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(productType) || string.IsNullOrEmpty(supplierName))
+            {
+                MessageBox.Show("Будь ласка, заповніть усі поля!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(quantityText, out int quantity) || !double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price))
+            {
+                MessageBox.Show("Перевірте правильність введення кількості та ціни!", "Помилка формату", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (warehouse context = new warehouse())
                 {
-                    case "Вся інформація про товар":
-                        dataGridView.DataSource = context.Products
-                            .Select(p => new { p.Id, p.Name, Тип = p.ProductType.Name, Постачальник = p.Supllier.Name, p.Quantity, p.CostPrice, p.DeliveryDate })
-                            .ToList();
-                        break;
+                    var typeEntity = context.ProductTypes.FirstOrDefault(t => t.Name == productType) ?? new ProductType { Name = productType };
+                    var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name == supplierName) ?? new Supllier { Name = supplierName };
 
-                    case "Всі типи товарів":
-                        dataGridView.DataSource = context.ProductTypes.Select(t => new { t.Id, Назва = t.Name }).ToList();
-                        break;
+                    Product newProduct = new Product
+                    {
+                        Name = name,
+                        Quantity = quantity,
+                        CostPrice = price,
+                        DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd"),
+                        ProductType = typeEntity,
+                        Supllier = supplierEntity
+                    };
 
-                    case "Всі типи постачальників":
-                        dataGridView.DataSource = context.Suplliers.Select(s => new { s.Id, Назва = s.Name }).ToList();
-                        break;
+                    context.Products.Add(newProduct);
+                    context.SaveChanges();
 
-                    case "Товар з максимальною кількістю":
-                        var maxQty = context.Products.Max(p => (int?)p.Quantity) ?? 0;
-                        dataGridView.DataSource = context.Products
-                            .Where(p => p.Quantity == maxQty)
-                            .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
-                            .ToList();
-                        break;
-
-                    case "Товару з мінімальною кількістю":
-                        var minQty = context.Products.Min(p => (int?)p.Quantity) ?? 0;
-                        dataGridView.DataSource = context.Products
-                            .Where(p => p.Quantity == minQty)
-                            .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
-                            .ToList();
-                        break;
-
-                    case "Товар з мінімальною собівартістю":
-                        var minPrice = context.Products.Min(p => (double?)p.CostPrice) ?? 0;
-                        dataGridView.DataSource = context.Products
-                            .Where(p => p.CostPrice == minPrice)
-                            .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
-                            .ToList();
-                        break;
-
-                    case "Товар з максимальною собівартістю":
-                        var maxPrice = context.Products.Max(p => (double?)p.CostPrice) ?? 0;
-                        dataGridView.DataSource = context.Products
-                            .Where(p => p.CostPrice == maxPrice)
-                            .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice })
-                            .ToList();
-                        break;
-
-                    case "Найстаріщий товар на складі":
-                        var oldestDate = context.Products.Min(p => p.DeliveryDate);
-                        dataGridView.DataSource = context.Products
-                            .Where(p => p.DeliveryDate == oldestDate)
-                            .Select(p => new { p.Id, p.Name, p.Quantity, p.CostPrice, Дата = p.DeliveryDate })
-                            .ToList();
-                        break;
-
-                    case "Средня кількість товарів за кожним типом товару":
-                        dataGridView.DataSource = context.Products
-                            .GroupBy(p => p.ProductType.Name)
-                            .Select(g => new { ТипТовару = g.Key, СередняКількість = g.Average(p => p.Quantity) })
-                            .ToList();
-                        break;
-
-                    case "Товар заданої категорії":
-                        dataGridView.DataSource = context.Products
-                            .Where(p => p.ProductType.Name == textProductType.Text)
-                            .Select(p => new { p.Id, p.Name, Категорія = p.ProductType.Name, p.Quantity })
-                            .ToList();
-                        break;
-
-                    case "Товар заданого постачальника":
-                        dataGridView.DataSource = context.Products
-                            .Where(p => p.Supllier.Name == textSupllier.Text)
-                            .Select(p => new {
-                                p.Id,
-                                p.Name,
-                                Категорія = p.ProductType.Name,
-                                p.Quantity
-                            })
-                            .ToList();
-                        break;
+                    MessageBox.Show("Товар успішно додано!", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadFullProductsInfo();
+                    LoadComboboxData();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dataGridView.CurrentRow == null) return;
-
-            int selectedId = (int)dataGridView.CurrentRow.Cells["Id"].Value;
+            if (!int.TryParse(dataGridView.CurrentRow.Cells["ID"].Value.ToString(), out int selectedId)) return;
 
             try
             {
@@ -168,46 +264,25 @@ namespace Homework23
                     var product = context.Products.Find(selectedId);
                     if (product != null)
                     {
-                        product.Name = txtName.Text;
+                        product.Name = txtName.Text.Trim();
 
-                        if (!int.TryParse(txtQuantity.Text, out int quantity))
-                        {
-                            MessageBox.Show("Помилка у полі Кількість!");
-                            return;
-                        }
-                        product.Quantity = quantity;
+                        if (int.TryParse(txtQuantity.Text, out int quantity)) product.Quantity = quantity;
 
                         string priceText = txtPrice.Text.Trim().Replace(',', '.');
-                        if (!double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price))
-                        {
-                            MessageBox.Show("Помилка у полі Ціна!");
-                            return;
-                        }
-                        product.CostPrice = price;
+                        if (double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price)) product.CostPrice = price;
 
                         product.DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
 
-                        // Тип товару
-                        var productTypeEntity = context.ProductTypes.FirstOrDefault(t => t.Name == textProductType.Text);
-                        if (productTypeEntity == null)
-                        {
-                            productTypeEntity = new ProductType { Name = textProductType.Text };
-                            context.ProductTypes.Add(productTypeEntity);
-                        }
-                        product.ProductType = productTypeEntity;
+                        string selectedType = cmbProductType.Text.Trim();
+                        product.ProductType = context.ProductTypes.FirstOrDefault(t => t.Name == selectedType) ?? new ProductType { Name = selectedType };
 
-                        // Постачальник
-                        var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name == textSupllier.Text);
-                        if (supplierEntity == null)
-                        {
-                            supplierEntity = new Supllier { Name = textSupllier.Text };
-                            context.Suplliers.Add(supplierEntity);
-                        }
-                        product.Supllier = supplierEntity;
+                        string selectedSupplier = cmbSupplier.Text.Trim();
+                        product.Supllier = context.Suplliers.FirstOrDefault(s => s.Name == selectedSupplier) ?? new Supllier { Name = selectedSupplier };
 
                         context.SaveChanges();
                         MessageBox.Show("Дані оновлено!");
-                        listBox_SelectedIndexChanged(null, null);
+                        LoadFullProductsInfo();
+                        LoadComboboxData();
                     }
                 }
             }
@@ -220,11 +295,9 @@ namespace Homework23
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.CurrentRow == null) return;
+            if (!int.TryParse(dataGridView.CurrentRow.Cells["ID"].Value.ToString(), out int selectedId)) return;
 
-            int selectedId = (int)dataGridView.CurrentRow.Cells["Id"].Value;
-
-            var confirmResult = MessageBox.Show("Ви впевнені, що хочете видалити цей товар?", "Підтвердження", MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
+            if (MessageBox.Show("Ви впевнені, що хочете видалити цей товар?", "Підтвердження", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {
@@ -235,9 +308,9 @@ namespace Homework23
                         {
                             context.Products.Remove(product);
                             context.SaveChanges();
-
                             MessageBox.Show("Товар видалено.");
-                            listBox_SelectedIndexChanged(null, null);
+                            LoadFullProductsInfo();
+                            LoadComboboxData();
                         }
                     }
                 }
@@ -248,68 +321,27 @@ namespace Homework23
             }
         }
 
-        private void btnAdd_Click_1(object sender, EventArgs e)
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string name = txtName.Text.Trim();
-            string quantityText = txtQuantity.Text.Trim();
-            string priceText = txtPrice.Text.Trim().Replace(',', '.');
-            string productType = textProductType.Text.Trim();
-            string supllier = textSupllier.Text.Trim();
-
-            if (!int.TryParse(quantityText, out int quantity))
+            if (dataGridView.CurrentRow != null)
             {
-                MessageBox.Show("Помилка у полі Кількість!", "Помилка формату", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                txtName.Text = dataGridView.CurrentRow.Cells["Name"].Value?.ToString();
+                txtQuantity.Text = dataGridView.CurrentRow.Cells["Quantity"].Value?.ToString();
+                txtPrice.Text = dataGridView.CurrentRow.Cells["Price"].Value?.ToString();
+                cmbProductType.Text = dataGridView.CurrentRow.Cells["Type"].Value?.ToString();
+                cmbSupplier.Text = dataGridView.CurrentRow.Cells["Supplier"].Value?.ToString();
 
-            if (!double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price))
-            {
-                MessageBox.Show("Помилка у полі Ціна!", "Помилка формату", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                using (warehouse context = new warehouse())
+                if (dataGridView.CurrentRow.Cells["Date"].Value != null &&
+                    DateTime.TryParse(dataGridView.CurrentRow.Cells["Date"].Value.ToString(), out DateTime date))
                 {
-                    context.Database.EnsureCreated();
-
-                    var productTypeEntity = context.ProductTypes.FirstOrDefault(t => t.Name == productType);
-                    if (productTypeEntity == null)
-                    {
-                        productTypeEntity = new ProductType { Name = productType };
-                        context.ProductTypes.Add(productTypeEntity);
-                    }
-
-                    var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name == supllier);
-                    if (supplierEntity == null)
-                    {
-                        supplierEntity = new Supllier { Name = supllier };
-                        context.Suplliers.Add(supplierEntity);
-                    }
-
-                    Product newProduct = new Product
-                    {
-                        Name = name,
-                        Quantity = quantity,
-                        CostPrice = price,
-                        DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd"),
-                        ProductType = productTypeEntity,
-                        Supllier = supplierEntity
-                    };
-
-                    context.Products.Add(newProduct);
-                    context.SaveChanges();
-
-                    MessageBox.Show("Товар успішно додано в базу!", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    listBox_SelectedIndexChanged(this, EventArgs.Empty);
+                    dateTimePicker.Value = date;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
