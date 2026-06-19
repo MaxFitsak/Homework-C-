@@ -58,6 +58,10 @@
             label2 = new Label();
             label3 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -97,6 +101,7 @@
             btnAdd.TabIndex = 5;
             btnAdd.Text = "Добавити";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtName
             // 
@@ -133,7 +138,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { опціїToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(923, 24);
+            menuStrip1.Size = new Size(926, 24);
             menuStrip1.TabIndex = 12;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -156,7 +161,7 @@
             menuAllProducts.Name = "menuAllProducts";
             menuAllProducts.Size = new Size(235, 22);
             menuAllProducts.Text = "Вся інформація про товар";
-            menuAllProducts.Click += menuAllTypes_Click;
+            menuAllProducts.Click += menuAllProducts_Click;
             // 
             // menuOldestProduct
             // 
@@ -288,11 +293,55 @@
             label3.Text = "Ціна товару";
             label3.Click += label3_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(76, 328);
+            button1.Name = "button1";
+            button1.Size = new Size(27, 23);
+            button1.TabIndex = 18;
+            button1.Text = "+";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnAddSupplier_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(109, 328);
+            button2.Name = "button2";
+            button2.Size = new Size(27, 23);
+            button2.TabIndex = 19;
+            button2.Text = "✏️";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += btnEditSupplier_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(258, 328);
+            button3.Name = "button3";
+            button3.Size = new Size(27, 23);
+            button3.TabIndex = 20;
+            button3.Text = "+";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += btnAddType_Click;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(291, 328);
+            button4.Name = "button4";
+            button4.Size = new Size(27, 23);
+            button4.TabIndex = 21;
+            button4.Text = "✏️";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += btnEditType_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(923, 450);
+            ClientSize = new Size(926, 450);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -349,5 +398,9 @@
         private Label label2;
         private Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }

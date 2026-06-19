@@ -80,9 +80,18 @@ namespace Homework23
 
         private void menuAllTypes_Click(object sender, EventArgs e)
         {
-            using (warehouse context = new warehouse())
+            try
             {
-                LoadFullProductsInfo();
+                using (warehouse context = new warehouse())
+                {
+                    dataGridView.DataSource = context.ProductTypes
+                        .Select(t => new { ID = t.Id, Назва = t.Name })
+                        .ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка завантаження типів: {ex.Message}");
             }
         }
 
@@ -211,13 +220,13 @@ namespace Homework23
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(productType) || string.IsNullOrEmpty(supplierName))
             {
-                MessageBox.Show("Будь ласка, заповніть усі поля!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Будь ласка заповніть усі поля", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (!int.TryParse(quantityText, out int quantity) || !double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price))
             {
-                MessageBox.Show("Перевірте правильність введення кількості та ціни!", "Помилка формату", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Перевірте правильність введення кількості та ціни", "Помилка формату", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -225,8 +234,23 @@ namespace Homework23
             {
                 using (warehouse context = new warehouse())
                 {
-                    var typeEntity = context.ProductTypes.FirstOrDefault(t => t.Name == productType) ?? new ProductType { Name = productType };
-                    var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name == supplierName) ?? new Supllier { Name = supplierName };
+                    context.Database.EnsureCreated();
+
+                    var typeEntity = context.ProductTypes.FirstOrDefault(t => t.Name.ToLower() == productType.ToLower());
+                    if (typeEntity == null)
+                    {
+                        typeEntity = new ProductType { Name = productType };
+                        context.ProductTypes.Add(typeEntity);
+                        context.SaveChanges();
+                    }
+
+                    var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name.ToLower() == supplierName.ToLower());
+                    if (supplierEntity == null)
+                    {
+                        supplierEntity = new Supllier { Name = supplierName };
+                        context.Suplliers.Add(supplierEntity);
+                        context.SaveChanges();
+                    }
 
                     Product newProduct = new Product
                     {
@@ -241,54 +265,68 @@ namespace Homework23
                     context.Products.Add(newProduct);
                     context.SaveChanges();
 
-                    MessageBox.Show("Товар успішно додано!", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Товар успішно додано", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     LoadFullProductsInfo();
                     LoadComboboxData();
+
+                    txtName.Clear();
+                    txtQuantity.Clear();
+                    txtPrice.Clear();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                string innerMessage = ex.InnerException != null ? $"\nДеталі: {ex.InnerException.Message}" : "";
+                MessageBox.Show($"Помилка при додаванні товару: {ex.Message}{innerMessage}", "Критична помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dataGridView.CurrentRow == null) return;
-            if (!int.TryParse(dataGridView.CurrentRow.Cells["ID"].Value.ToString(), out int selectedId)) return;
 
-            try
+            if (dataGridView.Columns.Contains("ID") && int.TryParse(dataGridView.CurrentRow.Cells["ID"].Value?.ToString(), out int selectedId))
             {
-                using (warehouse context = new warehouse())
+                try
                 {
-                    var product = context.Products.Find(selectedId);
-                    if (product != null)
+                    using (warehouse context = new warehouse())
                     {
-                        product.Name = txtName.Text.Trim();
+                        var product = context.Products.Find(selectedId);
+                        if (product != null)
+                        {
+                            product.Name = txtName.Text.Trim();
 
-                        if (int.TryParse(txtQuantity.Text, out int quantity)) product.Quantity = quantity;
+                            if (int.TryParse(txtQuantity.Text, out int quantity)) product.Quantity = quantity;
 
-                        string priceText = txtPrice.Text.Trim().Replace(',', '.');
-                        if (double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price)) product.CostPrice = price;
+                            string priceText = txtPrice.Text.Trim().Replace(',', '.');
+                            if (double.TryParse(priceText, NumberStyles.Any, CultureInfo.InvariantCulture, out double price)) product.CostPrice = price;
 
-                        product.DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
+                            product.DeliveryDate = dateTimePicker.Value.ToString("yyyy-MM-dd");
 
-                        string selectedType = cmbProductType.Text.Trim();
-                        product.ProductType = context.ProductTypes.FirstOrDefault(t => t.Name == selectedType) ?? new ProductType { Name = selectedType };
+                            string selectedType = cmbProductType.Text.Trim();
+                            var typeEntity = context.ProductTypes.FirstOrDefault(t => t.Name == selectedType) ?? new ProductType { Name = selectedType };
+                            product.ProductType = typeEntity;
 
-                        string selectedSupplier = cmbSupplier.Text.Trim();
-                        product.Supllier = context.Suplliers.FirstOrDefault(s => s.Name == selectedSupplier) ?? new Supllier { Name = selectedSupplier };
+                            string selectedSupplier = cmbSupplier.Text.Trim();
+                            var supplierEntity = context.Suplliers.FirstOrDefault(s => s.Name == selectedSupplier) ?? new Supllier { Name = selectedSupplier };
+                            product.Supllier = supplierEntity;
 
-                        context.SaveChanges();
-                        MessageBox.Show("Дані оновлено!");
-                        LoadFullProductsInfo();
-                        LoadComboboxData();
+                            context.SaveChanges();
+                            MessageBox.Show("Дані товару оновлено!");
+                            LoadFullProductsInfo();
+                            LoadComboboxData();
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Помилка оновлення: {ex.Message}");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Редагування можливе лише у режимі перегляду товарів.");
             }
         }
 
@@ -297,7 +335,7 @@ namespace Homework23
             if (dataGridView.CurrentRow == null) return;
             if (!int.TryParse(dataGridView.CurrentRow.Cells["ID"].Value.ToString(), out int selectedId)) return;
 
-            if (MessageBox.Show("Ви впевнені, що хочете видалити цей товар?", "Підтвердження", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Ви впевнені що хочете видалити цей товар?", "Підтвердження", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {
@@ -342,6 +380,155 @@ namespace Homework23
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddSupplier_Click(object sender, EventArgs e)
+        {
+            string supplierName = cmbSupplier.Text.Trim();
+
+            if (string.IsNullOrEmpty(supplierName))
+            {
+                MessageBox.Show("Введіть назву нового постачальника у поле", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (warehouse context = new warehouse())
+                {
+                    if (context.Suplliers.Any(s => s.Name == supplierName))
+                    {
+                        MessageBox.Show("Такий постачальник вже існує", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    context.Suplliers.Add(new Supllier { Name = supplierName });
+                    context.SaveChanges();
+
+                    MessageBox.Show("Постачальника успішно додано", "Успіх");
+                    LoadComboboxData();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnEditSupplier_Click(object sender, EventArgs e)
+        {
+            string selectedSupplier = cmbSupplier.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(selectedSupplier))
+            {
+                MessageBox.Show("Спочатку виберіть постачальника зі списку якого хочете перейменувати", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string newName = Microsoft.VisualBasic.Interaction.InputBox(
+                $"Введіть нову назву для постачальника \"{selectedSupplier}\":",
+                "Редагування постачальника",
+                selectedSupplier
+            ).Trim();
+
+            if (string.IsNullOrEmpty(newName) || newName == selectedSupplier) return;
+
+            try
+            {
+                using (warehouse context = new warehouse())
+                {
+                    var supplier = context.Suplliers.FirstOrDefault(s => s.Name == selectedSupplier);
+                    if (supplier != null)
+                    {
+                        supplier.Name = newName;
+                        context.SaveChanges();
+
+                        MessageBox.Show("Постачальника успішно перейменованo", "Успіх");
+
+                        LoadComboboxData(); 
+                        LoadFullProductsInfo();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAddType_Click(object sender, EventArgs e)
+        {
+            string typeName = cmbProductType.Text.Trim();
+
+            if (string.IsNullOrEmpty(typeName))
+            {
+                MessageBox.Show("Введіть назву нового типу товару у поле", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (warehouse context = new warehouse())
+                {
+                    if (context.ProductTypes.Any(t => t.Name == typeName))
+                    {
+                        MessageBox.Show("Такий тип товару вже існує", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    context.ProductTypes.Add(new ProductType { Name = typeName });
+                    context.SaveChanges();
+
+                    MessageBox.Show("Тип товару успішно додано", "Успіх");
+                    LoadComboboxData();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // Кнопка "Редактировать" (карандаш) возле типов товаров
+        private void btnEditType_Click(object sender, EventArgs e)
+        {
+            string selectedType = cmbProductType.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(selectedType))
+            {
+                MessageBox.Show("Спочатку виберіть тип товару зі списку який хочете перейменувати", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string newName = Microsoft.VisualBasic.Interaction.InputBox(
+                $"Введіть нову назву для типу \"{selectedType}\":",
+                "Редагування типу товару",
+                selectedType
+            ).Trim();
+
+            if (string.IsNullOrEmpty(newName) || newName == selectedType) return;
+
+            try
+            {
+                using (warehouse context = new warehouse())
+                {
+                    var pType = context.ProductTypes.FirstOrDefault(t => t.Name == selectedType);
+                    if (pType != null)
+                    {
+                        pType.Name = newName;
+                        context.SaveChanges();
+
+                        MessageBox.Show("Тип товару успішно перейменовано", "Успіх");
+
+                        LoadComboboxData();
+                        LoadFullProductsInfo();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
