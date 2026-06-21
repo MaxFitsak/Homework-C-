@@ -1,0 +1,17 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\bin\Debug\net10.0-windows\Lesson33.exe
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\bin\Debug\net10.0-windows\Lesson33.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\bin\Debug\net10.0-windows\Lesson33.runtimeconfig.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\bin\Debug\net10.0-windows\Lesson33.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\bin\Debug\net10.0-windows\Lesson33.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.Form1.resources
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.csproj.GenerateResource.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\refint\Lesson33.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\Lesson33.genruntimeconfig.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Lessons\Lesson33\Lesson33\obj\Debug\net10.0-windows\ref\Lesson33.dll
