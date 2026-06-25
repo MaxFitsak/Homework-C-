@@ -1,0 +1,17 @@
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.csproj.GenerateResource.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.AssemblyInfoInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.AssemblyInfo.cs
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.csproj.CoreCompileInputs.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.sourcelink.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\bin\Debug\net10.0-windows\Homework32.exe
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\bin\Debug\net10.0-windows\Homework32.deps.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\bin\Debug\net10.0-windows\Homework32.runtimeconfig.json
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\bin\Debug\net10.0-windows\Homework32.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\bin\Debug\net10.0-windows\Homework32.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.Form1.resources
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\refint\Homework32.dll
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.pdb
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\Homework32.genruntimeconfig.cache
+C:\Users\chupchushka\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Homework32\Homework32\obj\Debug\net10.0-windows\ref\Homework32.dll

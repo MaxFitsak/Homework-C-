@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Homework30")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af4c3d877e389d8a2dbd486a1bb3f301824b4173")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8c63e026854154317dbb99639191195137ea505")]
 [assembly: System.Reflection.AssemblyProductAttribute("Homework30")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Homework30")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
