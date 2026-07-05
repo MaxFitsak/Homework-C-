@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>Solution_WinForms_Server_TaskMeneger</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrarySerelization\ClassLibrarySerelization.csproj" />
+    <ProjectReference Include="..\CLibraryMyCommand\CLibraryMyCommand.csproj" />
+    <ProjectReference Include="..\CLibraryMyProcess\CLibraryMyProcess.csproj" />
+    <ProjectReference Include="..\Console_Server_TaskManager\Console_Server_TaskManager.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Console_Server_TaskManager\\Console_Server_TaskManager.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\bin\Debug\net10.0\ClassLibrarySerelization.deps.json
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\bin\Debug\net10.0\ClassLibrarySerelization.dll
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\bin\Debug\net10.0\ClassLibrarySerelization.pdb
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\ClassLibrarySerelization.GeneratedMSBuildEditorConfig.editorconfig
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\ClassLibrarySerelization.AssemblyInfoInputs.cache
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\ClassLibrarySerelization.AssemblyInfo.cs
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\ClassLibrarySerelization.csproj.CoreCompileInputs.cache
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\ClassLibrarySerelization.dll
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\refint\ClassLibrarySerelization.dll
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\ClassLibrarySerelization.pdb
+C:\programing\Solution WinForms_Server_TaskMeneger\ClassLibrarySerelization\obj\Debug\net10.0\ref\ClassLibrarySerelization.dll

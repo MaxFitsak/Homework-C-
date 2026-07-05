@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Console_Server_TaskManager/1.0.0": {
+        "dependencies": {
+          "CLibraryMyCommand": "1.0.0",
+          "CLibraryMyProcess": "1.0.0",
+          "ClassLibrarySerelization": "1.0.0"
+        },
+        "runtime": {
+          "Console_Server_TaskManager.dll": {}
+        }
+      },
+      "ClassLibrarySerelization/1.0.0": {
+        "runtime": {
+          "ClassLibrarySerelization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CLibraryMyCommand/1.0.0": {
+        "runtime": {
+          "CLibraryMyCommand.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CLibraryMyProcess/1.0.0": {
+        "runtime": {
+          "CLibraryMyProcess.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Console_Server_TaskManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ClassLibrarySerelization/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CLibraryMyCommand/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CLibraryMyProcess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\bin\Debug\net10.0\CLibraryMyProcess.deps.json
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\bin\Debug\net10.0\CLibraryMyProcess.dll
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\bin\Debug\net10.0\CLibraryMyProcess.pdb
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\CLibraryMyProcess.GeneratedMSBuildEditorConfig.editorconfig
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\CLibraryMyProcess.AssemblyInfoInputs.cache
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\CLibraryMyProcess.AssemblyInfo.cs
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\CLibraryMyProcess.csproj.CoreCompileInputs.cache
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\CLibraryMyProcess.dll
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\refint\CLibraryMyProcess.dll
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\CLibraryMyProcess.pdb
+C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyProcess\obj\Debug\net10.0\ref\CLibraryMyProcess.dll

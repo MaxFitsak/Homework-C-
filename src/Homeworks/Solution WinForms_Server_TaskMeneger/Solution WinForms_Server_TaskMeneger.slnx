@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ClassLibrarySerelization/ClassLibrarySerelization.csproj" />
+  <Project Path="CLibraryMyCommand/CLibraryMyCommand.csproj" />
+  <Project Path="CLibraryMyProcess/CLibraryMyProcess.csproj" />
+  <Project Path="Console_Server_TaskManager/Console_Server_TaskManager.csproj" />
+  <Project Path="Solution WinForms_Server_TaskMeneger/WinFormsClient_TaskManager.csproj" />
+</Solution>

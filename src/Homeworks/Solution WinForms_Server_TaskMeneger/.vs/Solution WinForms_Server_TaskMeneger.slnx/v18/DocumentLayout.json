@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AB32AB3-42A0-4D13-B7D3-9ED3C319B4B1}|ClassLibrarySerelization\\ClassLibrarySerelization.csproj|c:\\programing\\solution winforms_server_taskmeneger\\classlibraryserelization\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AB32AB3-42A0-4D13-B7D3-9ED3C319B4B1}|ClassLibrarySerelization\\ClassLibrarySerelization.csproj|solutionrelative:classlibraryserelization\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B33B090-89E7-4365-9F06-12096BB2A162}|CLibraryMyProcess\\CLibraryMyProcess.csproj|c:\\programing\\solution winforms_server_taskmeneger\\clibrarymyprocess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B33B090-89E7-4365-9F06-12096BB2A162}|CLibraryMyProcess\\CLibraryMyProcess.csproj|solutionrelative:clibrarymyprocess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF946770-4B0E-4D94-A8AE-E50BB959C45A}|Console_Server_TaskManager\\Console_Server_TaskManager.csproj|c:\\programing\\solution winforms_server_taskmeneger\\console_server_taskmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF946770-4B0E-4D94-A8AE-E50BB959C45A}|Console_Server_TaskManager\\Console_Server_TaskManager.csproj|solutionrelative:console_server_taskmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0526E709-4463-4C01-A82B-B4CDCB767A5A}|Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj|c:\\programing\\solution winforms_server_taskmeneger\\solution winforms_server_taskmeneger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0526E709-4463-4C01-A82B-B4CDCB767A5A}|Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj|solutionrelative:solution winforms_server_taskmeneger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0526E709-4463-4C01-A82B-B4CDCB767A5A}|Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger.csproj|c:\\programing\\solution winforms_server_taskmeneger\\solution winforms_server_taskmeneger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0526E709-4463-4C01-A82B-B4CDCB767A5A}|Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger.csproj|solutionrelative:solution winforms_server_taskmeneger\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\Class1.cs",
+              "RelativeDocumentMoniker": "ClassLibrarySerelization\\Class1.cs",
+              "ToolTip": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\Class1.cs",
+              "RelativeToolTip": "ClassLibrarySerelization\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T13:21:14.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\Form1.cs",
+              "RelativeDocumentMoniker": "Solution WinForms_Server_TaskMeneger\\Form1.cs",
+              "ToolTip": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\Form1.cs",
+              "RelativeToolTip": "Solution WinForms_Server_TaskMeneger\\Form1.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwFEAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T16:08:38.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Program.cs",
+              "RelativeDocumentMoniker": "Console_Server_TaskManager\\Program.cs",
+              "ToolTip": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Program.cs",
+              "RelativeToolTip": "Console_Server_TaskManager\\Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAwwCIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T16:28:13.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\Class1.cs",
+              "RelativeDocumentMoniker": "CLibraryMyProcess\\Class1.cs",
+              "ToolTip": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\Class1.cs",
+              "RelativeToolTip": "CLibraryMyProcess\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T16:27:45.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\Form1.cs",
+              "RelativeDocumentMoniker": "Solution WinForms_Server_TaskMeneger\\Form1.cs",
+              "ToolTip": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\Form1.cs [Design]",
+              "RelativeToolTip": "Solution WinForms_Server_TaskMeneger\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T16:23:50.747Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
