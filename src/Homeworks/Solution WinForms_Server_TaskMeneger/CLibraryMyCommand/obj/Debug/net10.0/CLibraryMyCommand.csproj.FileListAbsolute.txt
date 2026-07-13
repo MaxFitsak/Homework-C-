@@ -9,3 +9,15 @@ C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\n
 C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\refint\CLibraryMyCommand.dll
 C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.pdb
 C:\programing\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\ref\CLibraryMyCommand.dll
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\bin\Debug\net10.0\CLibraryMyCommand.deps.json
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\bin\Debug\net10.0\CLibraryMyCommand.dll
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\bin\Debug\net10.0\CLibraryMyCommand.pdb
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.AssemblyInfoInputs.cache
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.AssemblyInfo.cs
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.csproj.CoreCompileInputs.cache
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.sourcelink.json
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.dll
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\refint\CLibraryMyCommand.dll
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\CLibraryMyCommand.pdb
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Homeworks\Solution WinForms_Server_TaskMeneger\CLibraryMyCommand\obj\Debug\net10.0\ref\CLibraryMyCommand.dll

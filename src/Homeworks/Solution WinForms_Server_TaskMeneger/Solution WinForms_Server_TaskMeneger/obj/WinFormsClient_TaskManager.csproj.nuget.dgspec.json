@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj": {}
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj": {}
   },
   "projects": {
-    "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj",
+        "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj",
         "projectName": "ClassLibrarySerelization",
-        "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj",
+        "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj",
         "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
-        "outputPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\obj\\",
+        "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -341,14 +341,14 @@
         }
       }
     },
-    "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
+        "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
         "projectName": "CLibraryMyCommand",
-        "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
+        "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
         "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
-        "outputPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\obj\\",
+        "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -678,14 +678,14 @@
         }
       }
     },
-    "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj",
+        "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj",
         "projectName": "CLibraryMyProcess",
-        "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj",
+        "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj",
         "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
-        "outputPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\obj\\",
+        "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1015,14 +1015,14 @@
         }
       }
     },
-    "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj": {
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj",
+        "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj",
         "projectName": "Console_Server_TaskManager",
-        "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj",
+        "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj",
         "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
-        "outputPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\obj\\",
+        "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1040,14 +1040,14 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
-                "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj"
+              "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
+                "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj"
               },
-              "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
-                "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj"
+              "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
+                "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj"
               },
-              "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
-                "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj"
+              "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
+                "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj"
               }
             }
           }
@@ -1362,14 +1362,14 @@
         }
       }
     },
-    "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj": {
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
+        "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
         "projectName": "WinFormsClient_TaskManager",
-        "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
+        "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
         "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
-        "outputPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\obj\\",
+        "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1387,17 +1387,17 @@
             "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
-                "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj"
+              "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
+                "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj"
               },
-              "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
-                "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj"
+              "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
+                "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj"
               },
-              "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
-                "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj"
+              "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
+                "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj"
               },
-              "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj": {
-                "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj"
+              "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj": {
+                "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj"
               }
             }
           }

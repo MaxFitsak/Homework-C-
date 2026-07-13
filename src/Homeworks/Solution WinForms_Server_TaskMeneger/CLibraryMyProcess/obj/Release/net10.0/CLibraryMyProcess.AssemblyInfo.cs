@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CLibraryMyProcess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b47a02a5af50abda7b97963ec3f82eaef55239b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a38dcec8c6c6f44fba900f6913e8e8f8c547282e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CLibraryMyProcess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CLibraryMyProcess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

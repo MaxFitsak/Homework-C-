@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
+      "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
       "projectName": "CLibraryMyCommand",
-      "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
+      "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj",
       "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
-      "outputPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\obj\\",
+      "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",

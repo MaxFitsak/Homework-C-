@@ -85,11 +85,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
+      "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
       "projectName": "WinFormsClient_TaskManager",
-      "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
+      "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\WinFormsClient_TaskManager.csproj",
       "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
-      "outputPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\obj\\",
+      "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Solution WinForms_Server_TaskMeneger\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,17 +107,17 @@
           "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "projectReferences": {
-            "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
-              "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj"
+            "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj": {
+              "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\ClassLibrarySerelization\\ClassLibrarySerelization.csproj"
             },
-            "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
-              "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj"
+            "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj": {
+              "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyCommand\\CLibraryMyCommand.csproj"
             },
-            "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
-              "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj"
+            "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj": {
+              "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\CLibraryMyProcess\\CLibraryMyProcess.csproj"
             },
-            "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj": {
-              "projectPath": "C:\\programing\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj"
+            "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj": {
+              "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Solution WinForms_Server_TaskMeneger\\Console_Server_TaskManager\\Console_Server_TaskManager.csproj"
             }
           }
         }
