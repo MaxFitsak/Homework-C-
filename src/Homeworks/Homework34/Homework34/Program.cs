@@ -4,8 +4,8 @@ using System.Threading;
 
 class Program
 {
-    static AutoResetEvent waitEvent1 = new AutoResetEvent(false);
-    static AutoResetEvent waitEvent2 = new AutoResetEvent(false);
+    private static readonly Mutex mutex1 = new Mutex();
+    private static readonly Mutex mutex2 = new Mutex();
 
     static string file1 = "numbers.txt";
     static string file2 = "primes.txt";
@@ -20,64 +20,94 @@ class Program
         Thread t3 = new Thread(Thread3_FilterEnding7);
 
         t1.Start();
+        Thread.Sleep(20);
+
         t2.Start();
+        Thread.Sleep(20);
+
         t3.Start();
 
         t1.Join();
         t2.Join();
         t3.Join();
 
-        Console.WriteLine("\nВсі потоки завершили роботу");
+        mutex1.Dispose();
+        mutex2.Dispose();
+
+        Console.WriteLine("Всі потоки завершили роботу");
         Console.ReadKey();
     }
 
     static void Thread1_GenerateNumbers()
     {
-        Console.WriteLine("|Потік 1| Старт генерація чисел");
-        Random rnd = new Random();
-        int count = 50;
+        mutex1.WaitOne();
+        try
+        {
+            Console.WriteLine("|Потік 1| Старт генерація чисел");
+            Random rnd = new Random();
+            int count = 50;
 
-        using (StreamWriter sw = new StreamWriter(file1))
-            for (int i = 0; i < count; i++)
-                sw.WriteLine(rnd.Next(1, 500));
+            using (StreamWriter sw = new StreamWriter(file1))
+                for (int i = 0; i < count; i++)
+                    sw.WriteLine(rnd.Next(1, 500));
 
-        Console.WriteLine("|Потік 1| Завершено.");
-
-        waitEvent1.Set();
+            Console.WriteLine("|Потік 1| Завершено.");
+        }
+        finally
+        {
+            mutex1.ReleaseMutex();
+        }
     }
 
     static void Thread2_FilterPrimes()
     {
-        Console.WriteLine("|Потік 2| Очікування |Потоку 1|");
-        waitEvent1.WaitOne();
+        Console.WriteLine("|Потік 2| Очікування Потоку 1");
 
-        Console.WriteLine("|Потік 2| Старт фільтрація простих чисел");
-        var lines = File.ReadAllLines(file1);
+        mutex1.WaitOne();
 
-        using (StreamWriter sw = new StreamWriter(file2))
-            foreach (var line in lines)
-                if (int.TryParse(line.Trim(), out int num) && IsPrime(num))
-                    sw.WriteLine(num);
+        mutex2.WaitOne();
 
-        Console.WriteLine($"|Потік 2| Завершено.");
+        try
+        {
+            Console.WriteLine("|Потік 2| Старт фільтрація простих чисел");
+            var lines = File.ReadAllLines(file1);
 
-        waitEvent2.Set();
+            using (StreamWriter sw = new StreamWriter(file2))
+                foreach (var line in lines)
+                    if (int.TryParse(line.Trim(), out int num) && IsPrime(num))
+                        sw.WriteLine(num);
+
+            Console.WriteLine($"|Потік 2| Завершено.");
+        }
+        finally
+        {
+            mutex2.ReleaseMutex();
+            mutex1.ReleaseMutex();
+        }
     }
 
     static void Thread3_FilterEnding7()
     {
-        Console.WriteLine("|Потік 3| Очікування |Потоку 2|");
-        waitEvent2.WaitOne();
+        Console.WriteLine("|Потік 3| Очікування Потоку 2");
 
-        Console.WriteLine("|Потік 3| Старт фільтрація чисел на 7");
-        var lines = File.ReadAllLines(file2);
+        mutex2.WaitOne();
 
-        using (StreamWriter sw = new StreamWriter(file3))
-            foreach (var line in lines)
-                if (int.TryParse(line.Trim(), out int num) && num % 10 == 7)
-                    sw.WriteLine(num);
+        try
+        {
+            Console.WriteLine("|Потік 3| Старт фільтрація чисел на 7");
+            var lines = File.ReadAllLines(file2);
 
-        Console.WriteLine("|Потік 3| Завершено."); 
+            using (StreamWriter sw = new StreamWriter(file3))
+                foreach (var line in lines)
+                    if (int.TryParse(line.Trim(), out int num) && num % 10 == 7)
+                        sw.WriteLine(num);
+
+            Console.WriteLine("|Потік 3| Завершено.");
+        }
+        finally
+        {
+            mutex2.ReleaseMutex();
+        }
     }
 
     static bool IsPrime(int n)

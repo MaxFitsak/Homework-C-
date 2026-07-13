@@ -1,7 +1,9 @@
-using System.Data;
+using System;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace Lesson30
 {
@@ -10,21 +12,25 @@ namespace Lesson30
         private Thread searchThread;
         private int foundCount = 0;
 
+        private bool isCancelled = false;
+        private bool isPaused = false;
+        private ManualResetEvent pauseEvent = new ManualResetEvent(true);
+
         public Form1()
         {
             InitializeComponent();
-
-            Fill();
-
+            FillDrives();
             SetupListView();
+
+            btnStop.Enabled = false;
+            btnPause.Enabled = false;
         }
 
-        private void Fill()
+        private void FillDrives()
         {
-            string[] astrLogicalDrives = System.IO.Directory.GetLogicalDrives();
-
+            string[] logicalDrives = Directory.GetLogicalDrives();
             comboBoxDisks.Items.Clear();
-            foreach (string disk in astrLogicalDrives)
+            foreach (string disk in logicalDrives)
             {
                 comboBoxDisks.Items.Add(disk);
             }
@@ -33,31 +39,11 @@ namespace Lesson30
         private void SetupListView()
         {
             listView1.View = View.Details;
-
+            listView1.Columns.Clear();
             listView1.Columns.Add("Name", 150);
-            listView1.Columns.Add("Folder", 250);
-            listView1.Columns.Add("Size", 80);
-            listView1.Columns.Add("Modification date", 130);
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxDisks_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            listView1.Columns.Add("Folder", 280);
+            listView1.Columns.Add("Size", 90);
+            listView1.Columns.Add("Modification date", 140);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -70,100 +56,146 @@ namespace Lesson30
 
             if (string.IsNullOrWhiteSpace(textBoxFile.Text))
             {
-                MessageBox.Show("Введіть файл");
+                MessageBox.Show("Введіть маску файлу");
                 return;
             }
+
+            isCancelled = false;
+            isPaused = false;
+            pauseEvent.Set();
 
             listView1.Items.Clear();
             foundCount = 0;
+            lblResultCount.Text = "Результати пошуку: кількість знайдених файлів - 0";
 
-            string Path = comboBoxDisks.SelectedItem.ToString();
-            string mask = textBoxFile.Text;
-            bool searchCatalog = checkCatalogs.Checked;
+            string path = comboBoxDisks.SelectedItem.ToString();
+            string userMask = textBoxFile.Text;
             string wordToFind = textBoxMask.Text;
+            bool searchSubDirs = checkCatalogs.Checked;
 
-            DirectoryInfo di = new DirectoryInfo(Path);
+            DirectoryInfo di = new DirectoryInfo(path);
             if (!di.Exists)
             {
-                MessageBox.Show("Некоректний шлях!");
+                MessageBox.Show("Некоректний шлях");
                 return;
             }
 
+            string regexPattern = Regex.Escape(userMask).Replace(@"\*", ".*").Replace(@"\?", ".");
+            Regex regMask = new Regex("^" + regexPattern + "$", RegexOptions.IgnoreCase);
 
-            mask = mask.Replace(".", @"\.");
-            mask = mask.Replace("?", ".");
-            mask = mask.Replace("*", ".*");
-            mask = "^" + mask + "$";
-            Regex regMask = new Regex(mask, RegexOptions.IgnoreCase);
+            btnSearch.Enabled = false;
+            btnStop.Enabled = true;
+            btnPause.Enabled = true;
 
-
-            searchThread = new Thread(() => SearchFiles(di, regMask, searchCatalog, wordToFind));
+            searchThread = new Thread(() => StartSearchProcess(di, regMask, searchSubDirs, wordToFind));
             searchThread.IsBackground = true;
             searchThread.Start();
         }
 
-        private void SearchFiles(DirectoryInfo Path, Regex Mask, bool Catalog, string wordToFind)
+        private void StartSearchProcess(DirectoryInfo rootDir, Regex mask, bool searchSubDirs, string wordToFind)
         {
-            StreamReader sr = null;
-            // Список знайдених збігів
-            MatchCollection mc = null;
+            SearchFiles(rootDir, mask, searchSubDirs, wordToFind);
 
-            FileInfo[] fi = null;
+            this.Invoke(new Action(() =>
+            {
+                btnSearch.Enabled = true;
+                btnStop.Enabled = false;
+                btnPause.Enabled = false;
+                btnPause.Text = "Призупинити";
+
+                if (!isCancelled)
+                {
+                    MessageBox.Show($"Пошук завершено Знайдено файлів: {foundCount}");
+                }
+            }));
+        }
+
+        private void SearchFiles(DirectoryInfo currentDir, Regex mask, bool searchSubDirs, string wordToFind)
+        {
+            if (isCancelled) return;
+
+            pauseEvent.WaitOne();
+
+            FileInfo[] files = null;
             try
             {
-                fi = Path.GetFiles();
+                files = currentDir.GetFiles();
             }
-            catch
-            {
-                return;
-            }
+            catch { return; }
 
-            // Перебираємо список файлів
-            foreach (FileInfo f in fi)
+            foreach (FileInfo f in files)
             {
-                // Якщо файл відповідає масці
-                if (Mask.IsMatch(f.Name))
+                if (isCancelled) return;
+                pauseEvent.WaitOne();
+
+                if (mask.IsMatch(f.Name))
                 {
-                    // Збільшуємо лічильник
-                    ++foundCount;
-                    if (Mask != null)
+                    if (!string.IsNullOrWhiteSpace(wordToFind))
                     {
                         try
                         {
-                            // Відкриваємо файл
-                            sr = new StreamReader(Path.FullName + @"\" + f.Name,
-                                Encoding.Default);
-                            // Зчитуємо повністю
-                            string Content = sr.ReadToEnd();
-                            // Закриваємо файл
-                            sr.Close();
-                            // Шукаємо заданий текст
-                            if (!string.IsNullOrWhiteSpace(wordToFind))
-                            {
-                                mc = Mask.Matches(wordToFind);
-                                // Перебираємо список входжень
-                                foreach (Match m in mc)
-                                {
-                                    Console.WriteLine("Текст знайдено в позиції {0}.", m.Index);
-                                }
-                            }
-
-                            ListViewItem item = new ListViewItem(f.Name);
-                            item.SubItems.Add(f.DirectoryName);
-                            item.SubItems.Add(f.Length.ToString());
-                            item.SubItems.Add(f.LastWriteTime.ToString("dd.MM.yyyy H:mm:ss"));
+                            string content = File.ReadAllText(f.FullName, Encoding.UTF8);
+                            if (!content.Contains(wordToFind))
+                                continue;
                         }
-                        catch (Exception ex)
+                        catch
                         {
-                            Console.WriteLine(ex.Message);
+                            continue;
                         }
                     }
+
+                    Interlocked.Increment(ref foundCount);
+
+                    ListViewItem item = new ListViewItem(f.Name);
+                    item.SubItems.Add(f.DirectoryName);
+                    item.SubItems.Add(f.Length.ToString());
+                    item.SubItems.Add(f.LastWriteTime.ToString("dd.MM.yyyy H:mm:ss"));
+
+                    // Безпечне оновлення UI
+                    this.Invoke(new Action(() =>
+                    {
+                        listView1.Items.Add(item);
+                        lblResultCount.Text = $"Результати пошуку: кількість знайдених файлів - {foundCount}";
+                    }));
+                }
+            }
+
+            if (searchSubDirs)
+            {
+                DirectoryInfo[] subDirs = null;
+                try
+                {
+                    subDirs = currentDir.GetDirectories();
+                }
+                catch { return; }
+
+                foreach (DirectoryInfo dir in subDirs)
+                {
+                    SearchFiles(dir, mask, searchSubDirs, wordToFind);
                 }
             }
         }
-        private void textBoxFile_TextChanged(object sender, EventArgs e)
-        {
 
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            isCancelled = true;
+            pauseEvent.Set();
+        }
+
+        private void btnPause_Click(object sender, EventArgs e)
+        {
+            if (!isPaused)
+            {
+                isPaused = true;
+                pauseEvent.Reset();
+                btnPause.Text = "Продовжити";
+            }
+            else
+            {
+                isPaused = false;
+                pauseEvent.Set();
+                btnPause.Text = "Призупинити";
+            }
         }
     }
 }

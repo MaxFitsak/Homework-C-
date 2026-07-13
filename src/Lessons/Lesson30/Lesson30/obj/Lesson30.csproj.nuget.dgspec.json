@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj": {}
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj": {
+    "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj",
+        "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj",
         "projectName": "Lesson30",
-        "projectPath": "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj",
-        "packagesPath": "C:\\Users\\chupchushka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\obj\\",
+        "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\Lesson30.csproj",
+        "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Lessons\\Lesson30\\Lesson30\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chupchushka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,7 +41,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0-windows": {
@@ -66,7 +66,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.204/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

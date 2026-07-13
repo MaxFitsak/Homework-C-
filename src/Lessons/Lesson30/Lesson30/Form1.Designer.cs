@@ -35,11 +35,11 @@
             label4 = new Label();
             btnSearch = new Button();
             btnStop = new Button();
-            btnWait = new Button();
+            btnPause = new Button();
             textBoxFile = new TextBox();
             textBoxMask = new TextBox();
             comboBoxDisks = new ComboBox();
-            labelSearch = new Label();
+            lblResultCount = new Label();
             SuspendLayout();
             // 
             // listView1
@@ -59,7 +59,6 @@
             checkCatalogs.TabIndex = 1;
             checkCatalogs.Text = "Підкаталоги";
             checkCatalogs.UseVisualStyleBackColor = true;
-            checkCatalogs.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // label2
             // 
@@ -78,7 +77,6 @@
             label3.Size = new Size(145, 15);
             label3.TabIndex = 4;
             label3.Text = "Слово або фраза у файлі";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -107,15 +105,17 @@
             btnStop.TabIndex = 7;
             btnStop.Text = "Зупинити";
             btnStop.UseVisualStyleBackColor = true;
+            btnStop.Click += btnStop_Click;
             // 
-            // btnWait
+            // btnPause
             // 
-            btnWait.Location = new Point(666, 40);
-            btnWait.Name = "btnWait";
-            btnWait.Size = new Size(93, 23);
-            btnWait.TabIndex = 8;
-            btnWait.Text = "Призупинити";
-            btnWait.UseVisualStyleBackColor = true;
+            btnPause.Location = new Point(666, 40);
+            btnPause.Name = "btnPause";
+            btnPause.Size = new Size(93, 23);
+            btnPause.TabIndex = 8;
+            btnPause.Text = "Призупинити";
+            btnPause.UseVisualStyleBackColor = true;
+            btnPause.Click += btnPause_Click;
             // 
             // textBoxFile
             // 
@@ -123,7 +123,6 @@
             textBoxFile.Name = "textBoxFile";
             textBoxFile.Size = new Size(100, 23);
             textBoxFile.TabIndex = 9;
-            textBoxFile.TextChanged += textBoxFile_TextChanged;
             // 
             // textBoxMask
             // 
@@ -139,28 +138,26 @@
             comboBoxDisks.Name = "comboBoxDisks";
             comboBoxDisks.Size = new Size(121, 23);
             comboBoxDisks.TabIndex = 11;
-            comboBoxDisks.SelectedIndexChanged += comboBoxDisks_SelectedIndexChanged;
             // 
-            // labelSearch
+            // lblResultCount
             // 
-            labelSearch.AutoSize = true;
-            labelSearch.Location = new Point(140, 85);
-            labelSearch.Name = "labelSearch";
-            labelSearch.Size = new Size(201, 15);
-            labelSearch.TabIndex = 12;
-            labelSearch.Text = "Результат пошуку знайдено файлів";
-            labelSearch.Click += label1_Click;
+            lblResultCount.AutoSize = true;
+            lblResultCount.Location = new Point(140, 85);
+            lblResultCount.Name = "lblResultCount";
+            lblResultCount.Size = new Size(201, 15);
+            lblResultCount.TabIndex = 12;
+            lblResultCount.Text = "Результат пошуку знайдено файлів";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(842, 431);
-            Controls.Add(labelSearch);
+            Controls.Add(lblResultCount);
             Controls.Add(comboBoxDisks);
             Controls.Add(textBoxMask);
             Controls.Add(textBoxFile);
-            Controls.Add(btnWait);
+            Controls.Add(btnPause);
             Controls.Add(btnStop);
             Controls.Add(btnSearch);
             Controls.Add(label4);
@@ -184,10 +181,10 @@
         private Label label4;
         private Button btnSearch;
         private Button btnStop;
-        private Button btnWait;
+        private Button btnPause;
         private TextBox textBoxFile;
         private TextBox textBoxMask;
         private ComboBox comboBoxDisks;
-        private Label labelSearch;
+        private Label lblResultCount;
     }
 }

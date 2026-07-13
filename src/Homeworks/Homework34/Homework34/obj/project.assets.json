@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\chupchushka\\.nuget\\packages\\": {}
+    "C:\\Users\\maxfi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Homework34\\Homework34\\Homework34.csproj",
+      "projectUniqueName": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Homework34\\Homework34\\Homework34.csproj",
       "projectName": "Homework34",
-      "projectPath": "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Homework34\\Homework34\\Homework34.csproj",
-      "packagesPath": "C:\\Users\\chupchushka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chupchushka\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Homework34\\Homework34\\obj\\",
+      "projectPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Homework34\\Homework34\\Homework34.csproj",
+      "packagesPath": "C:\\Users\\maxfi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\maxfi\\source\\repos\\MaxFitsak\\Homework-C-\\src\\Homeworks\\Homework34\\Homework34\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\chupchushka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\maxfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
