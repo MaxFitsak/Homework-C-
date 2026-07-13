@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DataTimeServerUDP/DataTimeServerUDP.csproj" />
+  <Project Path="ServerDataTimeUDP/ServerDataTimeUDP.csproj" />
+</Solution>

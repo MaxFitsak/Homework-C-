@@ -1,0 +1,17 @@
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.Form1.resources
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.csproj.GenerateResource.cache
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.AssemblyInfoInputs.cache
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.AssemblyInfo.cs
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.csproj.CoreCompileInputs.cache
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.sourcelink.json
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\bin\Debug\net10.0-windows\DataTimeServerUDP.exe
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\bin\Debug\net10.0-windows\DataTimeServerUDP.deps.json
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\bin\Debug\net10.0-windows\DataTimeServerUDP.runtimeconfig.json
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\bin\Debug\net10.0-windows\DataTimeServerUDP.dll
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\bin\Debug\net10.0-windows\DataTimeServerUDP.pdb
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.dll
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\refint\DataTimeServerUDP.dll
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.pdb
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\DataTimeServerUDP.genruntimeconfig.cache
+C:\Users\maxfi\source\repos\MaxFitsak\Homework-C-\src\Lessons\DataTimeServerUDP\DataTimeServerUDP\obj\Debug\net10.0-windows\ref\DataTimeServerUDP.dll
